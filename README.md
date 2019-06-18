@@ -7,7 +7,7 @@
 
 ## Дизайн:
 <img src="https://github.com/DSanzh/TestApplication/blob/master/Resources/Screenshot.png" width="375" height="670" />
-Ссылка на [Zeplin](https://app.zeplin.io/project/59413a7dcda26c1669f8098e/dashboard)
+Ссылка на Zeplin - https://app.zeplin.io/project/59413a7dcda26c1669f8098e/dashboard
 
 ## Описание
 Доступ к дизайну должны прислать на почту. Обратить внимание, что нужен именно дизайн под iOS http://prntscr.com/flisx8
