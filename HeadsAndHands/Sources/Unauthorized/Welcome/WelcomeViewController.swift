@@ -29,7 +29,7 @@ extension WelcomeViewController {
     }
     private func setupConstraints() {
         welcomeText.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(<#T##amount: ConstraintOffsetTarget##ConstraintOffsetTarget#>)
+            make.top.equalToSuperview().offset(appearance.xsSpace)
         }
     }
 }
