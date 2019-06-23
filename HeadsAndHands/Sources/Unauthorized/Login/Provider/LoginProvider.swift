@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+protocol LoginProviderProtocol {
+    
+}
+
+class LoginProvider: LoginProviderProtocol {
+    
+}

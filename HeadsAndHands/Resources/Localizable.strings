@@ -5,3 +5,11 @@
   Created by Sanzh on 6/10/19.
   Copyright © 2019 D Sanzhar. All rights reserved.
 */
+
+"Welcome.Main" = "Добро пожаловать";
+"Login.Email" = "Почта";
+"Login.Password" = "Пароль";
+"Login.ForgotPassword" = "Забыли пароль?";
+"Login.Enter" = "Войти";
+"Login.LoginNotExist" = "У меня еще нет аккаунта. Создать.";
+"Common.Next" = "Далее";

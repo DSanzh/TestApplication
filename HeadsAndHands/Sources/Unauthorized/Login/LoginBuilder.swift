@@ -7,3 +7,21 @@
 //
 
 import Foundation
+
+class LoginBuilder: ModuleBuilder {
+    
+    private var initialState: LoginViewController.State = .initial
+    
+    func setInitial(state: LoginViewController.State) -> LoginBuilder {
+        self.initialState = state
+        return self
+    }
+    
+    func build() {
+        let presenter = LoginPresenter()
+        let interactor = LoginInteractor()
+        let viewController = LoginViewController(interactor: interactor, state: initialState)
+        presenter.viewController = viewController
+        return viewController
+    }
+}

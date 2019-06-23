@@ -7,3 +7,18 @@
 //
 
 import Foundation
+
+protocol LoginPresenterLogic: class {
+    func present(response: LoginDataFlow.Authorize.Response)
+}
+
+class LoginPresenter: LoginPresenterLogic {
+    
+    var viewController: LoginDisplayLogic?
+    
+    func present(response: LoginDataFlow.Authorize.Response) {
+        let viewModel: LoginDataFlow.Authorize.ViewModel
+        
+        viewController?.display(viewModel: viewModel)
+    }
+}
