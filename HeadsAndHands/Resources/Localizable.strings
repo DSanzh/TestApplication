@@ -8,6 +8,7 @@
 
 // MARK: - Welcome Module
 "Welcome.Main" = "Добро пожаловать";
+"Welcome.Authorization" = "Авторизация";
 
 // MARK: - Login Module
 "Login.Email" = "Почта";

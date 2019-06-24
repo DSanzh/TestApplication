@@ -9,7 +9,7 @@
 import Foundation
 
 struct Network {
-    static var baseURL: String = "api.openweathermap.org/data/2.5/"
+    static var baseURL: String = "https://api.openweathermap.org/data/2.5/"
     
     static var apiKey: String = "0a7b83d72107e8d01d76f8e0338f6912"
 }

@@ -12,34 +12,16 @@ import Moya
 typealias ErrorMessage = String?
 
 enum LoginProviderResponse {
-    case success(WeatherModel)
+    case success(WeatherResponseModel)
     case failure(ErrorMessage)
 }
 
 protocol LoginProviderProtocol {
-    func login(with type: LoginView.TextField, text: String, completion: @escaping (LoginProviderResponse) -> ())
+    func update(with type: LoginView.TextField, text: String)
+    func login(completion: @escaping (LoginProviderResponse) -> ())
 }
 
 class LoginProvider: LoginProviderProtocol {
-    func login(with type: LoginView.TextField, text: String, completion: @escaping (LoginProviderResponse) -> ()) {
-        switch type {
-        case .email:
-            self.dataStore.email = text
-        case .password:
-            self.dataStore.password = text
-        }
-        guard let error = validate(), let email = self.dataStore.email, let password = self.dataStore.password else {
-            completion(.failure(error))
-            return
-        }
-        
-        service.authorize(with: email, password: password) { result in
-            switch result {
-                case .success(<#T##Success#>)
-            }
-        }
-    }
-    
     
     private let dataStore: LoginDataStore
     private let service: LoginServiceProtocol
@@ -49,16 +31,55 @@ class LoginProvider: LoginProviderProtocol {
         self.dataStore = dataStore
         self.service = service
     }
+    
+    func update(with type: LoginView.TextField, text: String) {
+        switch type {
+        case .email:
+            self.dataStore.email = text
+        case .password:
+            self.dataStore.password = text
+        }
+    }
+    func login(completion: @escaping (LoginProviderResponse) -> ()) {
+        let error = validate()
+        guard error == nil else {
+            completion(.failure(error!))
+            return
+        }
+        let email = self.dataStore.email
+        let password = self.dataStore.password
+        service.authorize(with: email, password: password) { result in
+            switch result {
+            case .success(let model):
+                completion(.success(model))
+            case .failure(let error):
+                completion(.failure(error.localizedDescription))
+            }
+        }
+    }
 }
 extension LoginProvider {
     private func validate() -> ErrorMessage {
-        if let email = dataStore.email, email.isEmpty {
+        if dataStore.email.isEmpty {
             return "Почта не должна быть пустой"
         }
-        if let password = dataStore.password, password.isEmpty {
+        if !isValid(email: dataStore.email) {
+            return "Праверьте правильность введенной почты"
+        }
+        if dataStore.password.isEmpty {
             return "Пароль не должен быть пустым"
         }
-        
+        if !isValid(password: dataStore.password) {
+            return "Пароль должен быть минимум 6 символов, содержать минимум 1 строчную букву, 1 заглавную, и 1 цифру"
+        }
         return nil
+    }
+    func isValid(email: String) -> Bool {
+        let regex = try! NSRegularExpression(pattern: "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$", options: .caseInsensitive)
+        return regex.firstMatch(in: email, options: [], range: NSRange(location: 0, length: email.count)) != nil
+    }
+    func isValid(password: String) -> Bool {
+        let passwordRegex = "^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*()\\-_=+{}|?>.<,:;~`’]{8,}$"
+        return NSPredicate(format: "SELF MATCHES %@", passwordRegex).evaluate(with: password)
     }
 }

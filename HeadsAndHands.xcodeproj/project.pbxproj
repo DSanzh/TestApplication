@@ -64,15 +64,16 @@
 		DA7DD1DA22BFED4300F5B4C8 /* SF-Pro-Text-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = DA7DD1AA22BFED3200F5B4C8 /* SF-Pro-Text-SemiboldItalic.otf */; };
 		DA7DD1DC22BFF03500F5B4C8 /* NSAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7DD1DB22BFF03500F5B4C8 /* NSAttributedStringExtension.swift */; };
 		DA7DD1DF22BFF6F400F5B4C8 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7DD1DE22BFF6F400F5B4C8 /* Protocols.swift */; };
-		DA7DD1E122BFF88600F5B4C8 /* AuthorizeLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7DD1E022BFF88600F5B4C8 /* AuthorizeLoginViewModel.swift */; };
+		DA7DD1E122BFF88600F5B4C8 /* WeatherResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7DD1E022BFF88600F5B4C8 /* WeatherResponseModel.swift */; };
 		DA7DD1E322BFFD7A00F5B4C8 /* FloatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7DD1E222BFFD7A00F5B4C8 /* FloatingTextField.swift */; };
 		DA7DD1E522C00BB300F5B4C8 /* DeviceConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7DD1E422C00BB300F5B4C8 /* DeviceConstraint.swift */; };
 		DA7DD1E722C00C2300F5B4C8 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7DD1E622C00C2300F5B4C8 /* UIButton.swift */; };
 		DAA76EC622C0C514009CB38A /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA76EC522C0C514009CB38A /* UITextFieldExtension.swift */; };
 		DAA76EC822C0C9F1009CB38A /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA76EC722C0C9F1009CB38A /* UINavigationController.swift */; };
 		DAA76ECB22C0CF91009CB38A /* KeyboardEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA76ECA22C0CF91009CB38A /* KeyboardEventsViewController.swift */; };
-		DAA76ECE22C0DA74009CB38A /* WeatherEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA76ECD22C0DA74009CB38A /* WeatherEndpoint.swift */; };
 		DAA76ED022C0DD58009CB38A /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA76ECF22C0DD58009CB38A /* Network.swift */; };
+		DAA76ED222C142FC009CB38A /* NSError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA76ED122C142FC009CB38A /* NSError.swift */; };
+		DAA76ED422C15185009CB38A /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA76ED322C15185009CB38A /* WeatherViewModel.swift */; };
 		DAEE366C22B6CAD100209B35 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEE366B22B6CAD100209B35 /* UIViewController.swift */; };
 		DAEE366E22B6CBA600209B35 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEE366D22B6CBA600209B35 /* UIView.swift */; };
 		DAEE367122B6D19400209B35 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEE367022B6D19400209B35 /* Grid.swift */; };
@@ -168,15 +169,16 @@
 		DA7DD1BC22BFED3400F5B4C8 /* SF-Pro-Text-HeavyItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-HeavyItalic.otf"; sourceTree = "<group>"; };
 		DA7DD1DB22BFF03500F5B4C8 /* NSAttributedStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringExtension.swift; sourceTree = "<group>"; };
 		DA7DD1DE22BFF6F400F5B4C8 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
-		DA7DD1E022BFF88600F5B4C8 /* AuthorizeLoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizeLoginViewModel.swift; sourceTree = "<group>"; };
+		DA7DD1E022BFF88600F5B4C8 /* WeatherResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponseModel.swift; sourceTree = "<group>"; };
 		DA7DD1E222BFFD7A00F5B4C8 /* FloatingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTextField.swift; sourceTree = "<group>"; };
 		DA7DD1E422C00BB300F5B4C8 /* DeviceConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceConstraint.swift; sourceTree = "<group>"; };
 		DA7DD1E622C00C2300F5B4C8 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		DAA76EC522C0C514009CB38A /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 		DAA76EC722C0C9F1009CB38A /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
 		DAA76ECA22C0CF91009CB38A /* KeyboardEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardEventsViewController.swift; sourceTree = "<group>"; };
-		DAA76ECD22C0DA74009CB38A /* WeatherEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherEndpoint.swift; sourceTree = "<group>"; };
 		DAA76ECF22C0DD58009CB38A /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		DAA76ED122C142FC009CB38A /* NSError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSError.swift; sourceTree = "<group>"; };
+		DAA76ED322C15185009CB38A /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
 		DAEE366B22B6CAD100209B35 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		DAEE366D22B6CBA600209B35 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		DAEE367022B6D19400209B35 /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
@@ -375,7 +377,8 @@
 		DA26927322AD8C6000F19B6C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				DA7DD1E022BFF88600F5B4C8 /* AuthorizeLoginViewModel.swift */,
+				DA7DD1E022BFF88600F5B4C8 /* WeatherResponseModel.swift */,
+				DAA76ED322C15185009CB38A /* WeatherViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -428,6 +431,7 @@
 				DA7DD1E622C00C2300F5B4C8 /* UIButton.swift */,
 				DAA76EC522C0C514009CB38A /* UITextFieldExtension.swift */,
 				DAA76EC722C0C9F1009CB38A /* UINavigationController.swift */,
+				DAA76ED122C142FC009CB38A /* NSError.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -497,7 +501,6 @@
 		DAA76ECC22C0DA5B009CB38A /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				DAA76ECD22C0DA74009CB38A /* WeatherEndpoint.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -857,14 +860,15 @@
 			files = (
 				DA26928322AD8C6000F19B6C /* LoginPresenter.swift in Sources */,
 				DA26927B22AD8C6000F19B6C /* LoginInteractor.swift in Sources */,
-				DA7DD1E122BFF88600F5B4C8 /* AuthorizeLoginViewModel.swift in Sources */,
+				DA7DD1E122BFF88600F5B4C8 /* WeatherResponseModel.swift in Sources */,
 				DA26927D22AD8C6000F19B6C /* LoginService.swift in Sources */,
 				DA7DD1DC22BFF03500F5B4C8 /* NSAttributedStringExtension.swift in Sources */,
 				DA7DD19D22BFECD900F5B4C8 /* Font.swift in Sources */,
 				DA7DD1DF22BFF6F400F5B4C8 /* Protocols.swift in Sources */,
 				DA26927C22AD8C6000F19B6C /* LoginProvider.swift in Sources */,
-				DAA76ECE22C0DA74009CB38A /* WeatherEndpoint.swift in Sources */,
+				DAA76ED222C142FC009CB38A /* NSError.swift in Sources */,
 				DA26926922AD8C5800F19B6C /* Localizable.swift in Sources */,
+				DAA76ED422C15185009CB38A /* WeatherViewModel.swift in Sources */,
 				DAA76ED022C0DD58009CB38A /* Network.swift in Sources */,
 				DA7DD1E722C00C2300F5B4C8 /* UIButton.swift in Sources */,
 				DAA76ECB22C0CF91009CB38A /* KeyboardEventsViewController.swift in Sources */,

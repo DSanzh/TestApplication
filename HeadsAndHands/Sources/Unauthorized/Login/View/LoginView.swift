@@ -47,6 +47,7 @@ class LoginView: UIView {
         textField.delegate = self
         textField.tag = TextField.password.rawValue
         textField.returnKeyType = .join
+        textField.isSecureTextEntry = true
         return textField
     }()
     private lazy var forgotPasswordButton: UIButton = {
@@ -103,6 +104,7 @@ extension LoginView: UITextFieldDelegate {
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.moveToNextTextTextField()
+        if passwordTextField == textField { delegate?.didTapButton(type: .login) }
         return true
     }
     @objc private func loginTapped() {

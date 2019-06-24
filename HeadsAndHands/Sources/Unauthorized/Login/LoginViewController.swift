@@ -61,22 +61,31 @@ extension LoginViewController: LoginDisplayLogic {
 
 extension LoginViewController: LoginViewDelegate {
     func textDidChange(in type: LoginView.TextField, text: String) {
-        
+        interactor.update(with: .init(request: .login(with: type, text: text)))
     }
     
     func didTapButton(type: LoginView.Button) {
-        
+        switch type {
+            case .login: interactor.login()
+            default: break
+        }
     }
 }
 
 extension LoginViewController {
     enum State {
         case initial
+        case error(ErrorMessage)
+        case succes(WeatherViewModel)
     }
     private func updateDisplay() {
         switch state {
         case .initial:
             print()
+        case .succes(let model):
+            showAlert(title: "Успешно", message: model.message)
+        case .error(let error):
+            showAlert(title: "Внимание", message: error)
         }
     }
 }

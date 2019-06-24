@@ -27,6 +27,8 @@ internal enum L10n {
     internal enum Welcome {
         /// Добро пожаловать
         internal static let main = L10n.tr("Localizable", "Welcome.Main")
+        /// Авторизация
+        internal static let authorization = L10n.tr("Localizable", "Welcome.Authorization")
     }
     internal enum Common {
         /// Далее

@@ -9,7 +9,8 @@
 import Foundation
 
 protocol LoginBusinessLogic: class {
-    func login(with request: LoginDataFlow.Authorize.Request)
+    func update(with request: LoginDataFlow.Authorize.Request)
+    func login()
 }
 
 class LoginInteractor: LoginBusinessLogic {
@@ -22,13 +23,22 @@ class LoginInteractor: LoginBusinessLogic {
         self.provider = provider
     }
     
-    func login(with request: LoginDataFlow.Authorize.Request) {
-        let response: LoginDataFlow.Authorize.Response = .init(response: .failure(NSError()))
-        
-        self.presenter.present(response: response)
+    func update(with request: LoginDataFlow.Authorize.Request) {
+        switch request.request {
+        case .login(let type, let text):
+            provider.update(with: type, text: text)
+        }
+    }
+    func login() {
+        var response: LoginDataFlow.Authorize.Response = .init(response: .failure(NSError.notAnObject))
+        provider.login { result in
+            switch result {
+            case .success(let model):
+                response = .init(response: .success(model))
+            case .failure(let error):
+                response = .init(response: .failure(error))
+            }
+            self.presenter.present(response: response)
+        }
     }
 }
-
-//extension LoginInteractor {
-//    private func validate
-//}

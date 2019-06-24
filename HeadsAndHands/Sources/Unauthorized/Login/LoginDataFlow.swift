@@ -28,10 +28,10 @@ enum LoginDataFlow {
 
 extension LoginDataFlow {
     enum AuthorizeRequest {
-        case login(with: AuthorizeLoginViewModel)
+        case login(with: LoginView.TextField, text: String)
     }
     enum AuthorizeResponse {
-        case failure(Error)
-        case success
+        case failure(ErrorMessage)
+        case success(WeatherResponseModel)
     }
 }

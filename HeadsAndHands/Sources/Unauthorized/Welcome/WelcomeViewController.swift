@@ -46,7 +46,7 @@ extension WelcomeViewController {
         welcomeText.attributedText = Typography.titleFirst(string: L10n.Welcome.main,
                                                            color: .black,
                                                            aligment: .center).styledText
-        loginButton.setAttributedTitle(Typography.subheadSecond(string: L10n.Common.next,
+        loginButton.setAttributedTitle(Typography.subheadSecond(string: L10n.Welcome.authorization,
                                                                 color: .darkSkyBlueTwo,
                                                                 aligment: .center).styledText,
                                        for: .normal)
