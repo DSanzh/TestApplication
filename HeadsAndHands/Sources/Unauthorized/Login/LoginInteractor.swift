@@ -28,3 +28,7 @@ class LoginInteractor: LoginBusinessLogic {
         self.presenter.present(response: response)
     }
 }
+
+//extension LoginInteractor {
+//    private func validate
+//}

@@ -17,7 +17,7 @@ class LoginPresenter: LoginPresenterLogic {
     var viewController: LoginDisplayLogic?
     
     func present(response: LoginDataFlow.Authorize.Response) {
-        let viewModel: LoginDataFlow.Authorize.ViewModel
+        let viewModel: LoginDataFlow.Authorize.ViewModel = .init(viewModel: .initial)
         
         viewController?.display(viewModel: viewModel)
     }

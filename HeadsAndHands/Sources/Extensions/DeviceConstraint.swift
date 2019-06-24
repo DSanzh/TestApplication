@@ -34,3 +34,9 @@ extension Int {
         return CGFloat(self) * DeviceConstraint.ratio
     }
 }
+
+extension CGSize {
+    var adjusted: CGSize {
+        return CGSize(width: CGFloat(self.width).adjusted, height: CGFloat(self.height).adjusted)
+    }
+}

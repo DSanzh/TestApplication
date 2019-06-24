@@ -21,7 +21,8 @@ class FloatingTextField: UITextField {
 
 extension FloatingTextField {
     private func setupView() {
-        addUnderLine(with: .white)
-        addFloatingPlaceholderWith(font: Font.footnoteFirst(size: 13).font, color: .warmGrey)
+        textColor = Color.black.color
+        addUnderLine(with: .veryLightPink)
+        addFloatingPlaceholderWith(font: Font.footnoteFirst(size: 13).font, color: .brownGrey)
     }
 }

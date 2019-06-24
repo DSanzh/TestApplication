@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+protocol LoginDataStoreProtocol {
+    var email: String? { get set }
+    var password: String? { get set }
+}
+
+class LoginDataStore: LoginDataStoreProtocol {
+    var email: String?
+    var password: String?
+    
+}

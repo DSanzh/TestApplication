@@ -32,6 +32,6 @@ extension LoginDataFlow {
     }
     enum AuthorizeResponse {
         case failure(Error)
-        case success()
+        case success
     }
 }

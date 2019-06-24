@@ -6,7 +6,7 @@
 //  Copyright © 2019 D Sanzhar. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class LoginBuilder: ModuleBuilder {
     
@@ -17,9 +17,9 @@ class LoginBuilder: ModuleBuilder {
         return self
     }
     
-    func build() {
+    func build() -> UIViewController {
         let presenter = LoginPresenter()
-        let interactor = LoginInteractor()
+        let interactor = LoginInteractor(presenter: presenter)
         let viewController = LoginViewController(interactor: interactor, state: initialState)
         presenter.viewController = viewController
         return viewController

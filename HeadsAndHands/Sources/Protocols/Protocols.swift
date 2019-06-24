@@ -6,9 +6,9 @@
 //  Copyright © 2019 D Sanzhar. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol ModuleBuilder {
-    func build()
+    func build() -> UIViewController
 }
 

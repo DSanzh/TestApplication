@@ -56,7 +56,10 @@ extension WelcomeViewController {
         loginButton.addTarget(self, action: #selector(presentLogin), for: .touchUpInside)
     }
     @objc private func presentLogin() {
-        
+        let viewController = LoginBuilder()
+                                .setInitial(state: .initial)
+                                .build()
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }
 

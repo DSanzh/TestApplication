@@ -20,7 +20,9 @@ internal enum L10n {
         /// Войти
         internal static let enter = L10n.tr("Localizable", "Login.Enter")
         /// У меня еще нет аккаунта. Создать.
-        internal static let loginNotExits = L10n.tr("Localizable", "Login.loginNotExits")
+        internal static let loginNotExits = L10n.tr("Localizable", "Login.LoginNotExist")
+        /// Авторизация
+        internal static let title = L10n.tr("Localizable", "Login.Title")
     }
     internal enum Welcome {
         /// Добро пожаловать

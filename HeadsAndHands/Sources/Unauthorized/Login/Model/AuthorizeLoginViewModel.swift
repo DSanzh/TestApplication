@@ -11,3 +11,7 @@ import Foundation
 struct AuthorizeLoginViewModel {
     
 }
+
+struct WeatherModel {
+    
+}
