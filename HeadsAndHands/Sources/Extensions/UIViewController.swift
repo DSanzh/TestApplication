@@ -14,4 +14,16 @@ extension UIViewController {
         let navigationController = UINavigationController(rootViewController: self)
         return navigationController
     }
+    func setTitle(text: String, color type: Color? = Color.black, font: UIFont? = FontFamily.SFProText.medium.font(size: 17)) {
+        title = text
+        var attributes: [NSAttributedString.Key: Any] = [:]
+        if let type = type { attributes[NSAttributedString.Key.foregroundColor] = type.color }
+        if let font = font { attributes[NSAttributedString.Key.font] = font }
+        navigationController?.navigationBar.titleTextAttributes = attributes
+    }
+    func showAlert(title: String?, message: String?) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
 }

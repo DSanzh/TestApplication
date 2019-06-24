@@ -45,10 +45,10 @@ public enum Color: String {
     case darkSkyBlueTwo = "#37383D"
     case black = "#333333"
     case white = "#FFFFFF"
-    case warmGrey = "#797979"
+    case brownGrey = "#797979"
     case tangerine = "#ff9b00"
     case windowsBlue = "#3785c8"
-    
+    case veryLightPink = "#ebebeb"
     public var color: UIColor {
         return UIColor(self.rawValue)
     }
@@ -61,12 +61,14 @@ public enum Color: String {
             return "Black"
         case .white:
             return "White"
-        case .warmGrey:
-            return "Warm Grey"
+        case .brownGrey:
+            return "Brown Grey"
         case .tangerine:
             return "Tangerine"
         case .windowsBlue:
             return "Windows Blue"
+        case .veryLightPink:
+            return "Very light Pink"
         }
     }
     public var hexName: String {

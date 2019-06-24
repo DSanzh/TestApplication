@@ -5,3 +5,18 @@
   Created by Sanzh on 6/10/19.
   Copyright © 2019 D Sanzhar. All rights reserved.
 */
+
+// MARK: - Welcome Module
+"Welcome.Main" = "Добро пожаловать";
+"Welcome.Authorization" = "Авторизация";
+
+// MARK: - Login Module
+"Login.Email" = "Почта";
+"Login.Password" = "Пароль";
+"Login.ForgotPassword" = "Забыли пароль?";
+"Login.Enter" = "Войти";
+"Login.LoginNotExist" = "У меня еще нет аккаунта. Создать.";
+"Login.Title" = "Авторизация";
+
+// MARK: - Common
+"Common.Next" = "Далее";
